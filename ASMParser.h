@@ -13,9 +13,11 @@ public:
         else if ((ifp = fopen(name.c_str(), "r")) == NULL)
             fprintf(stderr, "open failed: %s\n", name.c_str());
     }
+    
     bool hasMoreCommands() {
         return !feof(ifp);
     }
+    
     int advance() {
         char line[1024];
         cmd = "";
@@ -38,14 +40,17 @@ public:
         else
             return C_COMMAND;
     }
+    
     std::string symbol() {
         return commandType() == A_COMMAND ? 
             cmd.substr(1) : cmd.substr(1, cmd.find_last_of(')') - 1);
     }
+    
     std::string dest() {
         size_t pos = cmd.find('=');
         return pos != std::string::npos ? cmd.substr(0, pos) : "";
     }
+    
     std::string comp() {
         size_t pos;
         if ((pos = cmd.find('=')) != std::string::npos)
@@ -55,20 +60,25 @@ public:
         else
             return "";
     }
+    
     std::string jump() {
         size_t pos = cmd.find(';');
         return pos != std::string::npos ? cmd.substr(pos + 1) : "";
     }
+    
     std::string command() {
         return cmd;       
     }
+    
     void setCommand(std::string command) {
         cmd = command;
     }
+    
     ~ASMParser() {
         if (ifp != stdin)
             fclose(ifp);
     }
+    
 private:
     std::string cmd;
     FILE *ifp;
