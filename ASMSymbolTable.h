@@ -11,16 +11,20 @@ public:
             {"R6", 6}, {"R7", 7}, {"R8", 8}, {"R9", 9}, {"R10", 10}, {"R11", 11}, {"R12", 12},
             {"R13", 13}, {"R14", 14}, {"R15", 15}};
     }
+
     void addEntry(std::string symbol, int address) {
         m[symbol] = address;
     }
+
     bool contains(std::string symbol) {
             
         return m.find(symbol) != m.end();
     }
+
     int getAddress(std::string symbol) {
         return m[symbol];
     }
+
 private:
     std::map<std::string, int> m;
 };

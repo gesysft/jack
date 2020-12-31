@@ -19,6 +19,19 @@
 
 using namespace std;
 
+vector<string> load(string inname);
+void assemble(string inname);
+
+int main(int argc, char *argv[]) {
+    if (argc == 1) {
+        assemble("");
+    } else {
+        while (--argc > 0)
+            assemble(*++argv);
+    }
+    return 0;
+}
+
 vector<string> load(string inname) {
     vector<string> rom; 
     static int start = 16;
@@ -80,12 +93,3 @@ void assemble(string inname) {
     delete cd;
 }
 
-int main(int argc, char *argv[]) {
-    if (argc == 1) {
-        assemble("");
-    } else {
-        while (--argc > 0)
-            assemble(*++argv);
-    }
-    return 0;
-}

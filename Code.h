@@ -11,6 +11,7 @@ public:
             {"A",   "100"}, {"AM",  "101"}, {"AD",  "110"}, {"AMD",  "111"}};
         return destcode.find(s) != destcode.end() ? destcode[s] : "000";
     }
+
     std::string comp(std::string s) {
         static std::map<std::string, std::string> compcode = {
             {"0",   "0101010"}, {"1",   "0111111"}, {"-1",  "0111010"}, {"D",   "0001100"},
@@ -24,6 +25,7 @@ public:
             {"D|M", "1010101"}, {"M|D", "1010101"}};
         return compcode.find(s) != compcode.end() ? compcode[s] : "000";
     }
+
     std::string jump(std::string s) {
         static std::map<std::string, std::string> jumpcode = {
             {"",    "000"}, {"JGT", "001"}, {"JEQ", "010"}, {"JGE", "011"},
