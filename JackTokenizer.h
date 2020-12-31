@@ -4,7 +4,7 @@
 #include <set>
 #include <stdio.h>
 
-enum { KEYWORD = 1, SYMBOL, IDENTIFIER, INT_CONST, STRING_CONST };
+enum {KEYWORD = 1, SYMBOL, IDENTIFIER, INT_CONST, STRING_CONST};
 enum {CLASS, METHOD, FUNCTION, CONSTRUCTOR, INT, BOOLEAN, CHAR, VOID, VAR, STATIC, FIELD, LET, DO, IF, ELSE,
         WHILE, RETURN, TURE, FALSE, NULLNONE, THIS};
 
@@ -16,9 +16,11 @@ public:
         else if ((ifp = fopen(name.c_str(), "r")) == NULL)
             fprintf(stderr, "error: can't open %s for read\n", name.c_str());
     }
+
     bool hasMoreTokens() { 
         return !feof(ifp);
     }
+
     int advance() {
         std::string symbol = "{}()[].,;+-*/&|<>=~";
         std::set<std::string> keyword = {"class", "constructor", "function", "method", "field",
@@ -83,27 +85,35 @@ public:
         *++p = '\0';
         return tokentype = (symbol.find(tokenvalue = s) != std::string::npos) ? SYMBOL : c;
     }
+
     int tokenType() {
         return tokentype;
     }
+
     std::string token() {
         return tokenvalue;
     }
+
     std::string keyword() {
         return tokenvalue;
     }
+
     std::string symbol() {
         return tokenvalue;
     }
+
     std::string identifier() {
         return tokenvalue;
     }
+
     int intVal() {
         return stoi(tokenvalue);
     }
+
     std::string stringVal() {
         return tokenvalue;
     }
+
     ~JackTokenizer() {
         if (ifp != stdin)
             fclose(ifp);
