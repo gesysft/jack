@@ -10,7 +10,6 @@ class VMParser {
 public:
     std::string infile;
 
-public:
     VMParser(std::string name = "") {
         if (name == "") {
             ifp = stdin;
@@ -22,9 +21,11 @@ public:
             fprintf(stderr, "error: can't open %s for read\n", infile.c_str());
         }
     }
+
     bool hasMoreCommands() {
         return !feof(ifp);
     }
+
     int advance() {
         static std::map<std::string, int> m {
             {"add", C_ARITHMETIC}, {"sub", C_ARITHMETIC}, {"neg", C_ARITHMETIC},
@@ -59,22 +60,28 @@ public:
         }
         return EOF;
     }
+
     int commandType() {
         return type;
     }
+
     std::string command() {
         return cmd;
     }
+
     std::string arg1() {
         return argument1;
     }
+
     int arg2() {
         return argument2;
     }
+
     ~VMParser() {
         if (ifp != stdin)
             fclose(ifp);
     }
+
 private:
     FILE *ifp;
     int type;

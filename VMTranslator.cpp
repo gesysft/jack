@@ -1,3 +1,8 @@
+/*
+    chapter7: Virtual Machine 1: Stack Arithmetic
+    chapter8: Virtual Machine 2: Program Control
+*/
+
 #include <iostream>
 #include <map>
 #include <stdio.h>

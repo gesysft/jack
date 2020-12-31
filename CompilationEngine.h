@@ -349,7 +349,7 @@ private:
         } else if (tk->tokenType() == STRING_CONST) { /* std::stringConstant */
             vm->writePush(SEGMENT_CONST, tk->token().size());
             vm->writeCall("String.new", 1);
-            for (int i = 0; i < tk->token().size(); ++i) {
+            for (size_t i = 0; i < tk->token().size(); ++i) {
                 vm->writePush(SEGMENT_CONST, tk->token()[i]);
                 vm->writeCall("String.appendChar", 2);
             }

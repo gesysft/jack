@@ -1,5 +1,4 @@
 /*
-    see
     chapter 4: Machine Language
     chapter 5: Computer Architecture
     chapter 6: Assembler  

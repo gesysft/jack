@@ -78,7 +78,7 @@ public:
         if (ifp != stdin)
             fclose(ifp);
     }
-    
+
 private:
     std::string cmd;
     FILE *ifp;

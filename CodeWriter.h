@@ -9,7 +9,6 @@ class CodeWriter {
 public:
     std::string outfile;
 
-public:
     CodeWriter(std::string name = "") {
         if (name == "") {
             outfile = "stdout";
@@ -137,6 +136,7 @@ public:
         if (ofp != stdout)
             fclose(ofp);
     }
+
 private:
     std::string name;
     FILE *ofp;
