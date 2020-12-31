@@ -1,3 +1,7 @@
+/*
+    chapter 10: Compiler 1: Syntax Analysis
+*/
+
 #include <string>
 #include <stdio.h>
 #include <dirent.h>

@@ -1,3 +1,8 @@
+/*
+    chapter 10: Compiler 1: Syntax Analysis
+    chapter 11: Compiler 2: Code Generation
+*/
+
 #include <string>
 #include <stdio.h>
 #include <dirent.h>
