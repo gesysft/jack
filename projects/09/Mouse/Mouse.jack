@@ -1,0 +1,90 @@
+class Mouse {
+    field int x, y; // mouse's top-left corner
+    
+    constructor Mouse new(int x0, int y0) {
+        let x = x0;
+        let y = y0;
+        do draw();
+        return this;
+    }
+
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+    method int getX() {
+        return x;
+    }
+
+    method int getY() {
+        return y;
+    }
+
+    method void drawMouse() {
+        var int x2;
+        var int y2;
+
+        if ((x + 8) > 511) {
+            let x2 = 511;
+        } else {
+            let x2 = x + 8;
+        }
+        if ((y + 8) > 255) {
+            let y2 = 255;
+        } else {
+            let y2 = y + 8;
+        }
+
+        do Screen.drawLine(x, y, x2, y2);
+        do Screen.drawLine(x, y, x2, y);
+        do Screen.drawLine(x, y, x, y2);
+        return;
+    }
+ 
+    method void draw() {
+        do Screen.setColor(true);
+        do drawMouse();
+        return;
+    }
+
+    method void erase() {
+        do Screen.setColor(false);
+        do drawMouse();
+        return;
+    }
+    
+    // 256 * 512
+    method void moveUp() {
+        if (y > 0) {
+            do erase();
+            let y = y - 1;
+            do draw();
+        }
+        return;
+    }
+    method void moveDown() {
+        if (y < 255) {
+            do erase();
+            let y = y + 1;
+            do draw();
+        }
+        return;
+    }
+    method void moveLeft() {
+        if (x > 0) {
+            do erase();
+            let x = x - 1;
+            do draw();
+        }
+        return;
+    }
+    method void moveRight() {
+        if (x < 511) {
+            do erase();
+            let x = x + 1;
+            do draw();
+        }
+        return;
+    }
+}

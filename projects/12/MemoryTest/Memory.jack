@@ -1,0 +1,79 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/12/Memory.jack
+
+/**
+ * Memory operations library.
+ */ 
+class Memory {
+    static Array free;
+
+    /** Initializes memory parameters. */
+    function void init() {
+        let free = 0;
+        let free[2048] = 14334; // (16383 - 2048 + 1) - 2
+        let free[2049] = 2050;  // next
+        return;
+    }
+
+    /** Returns the value of the main memory at the given address. */
+    function int peek(int address) {
+        return free[address];
+    }
+
+    /** Sets the value of the main memory at this address
+     *  to the given value. */
+    function void poke(int address, int value) {
+        let free[address] = value;
+        return;
+    }
+
+    /** finds and allocates from the heap a memory block of the 
+     *  specified size and returns a reference to its base address. */
+    function int alloc(int size) {
+        var Array p;
+        
+        if (size < 1) {
+            do Sys.error(5);
+        }
+        let p = 2048;   // heap begin
+        while (p[0] < size) { // first fit
+            let p = p[1];
+        }
+        if (p + size > 16379) { // p + size + 4 > 16383
+            do Sys.error(6);
+        }
+        if (p[0] > (size + 2)) {
+            let p[size + 2] = p[0] - size - 2; 
+            if (p[1] = (p + 2)) {
+                let p[size + 3] = p + size + 4;
+            } else {
+                let p[size + 3] = p[1];
+            }
+            let p[1] = p + size + 2;
+        }
+        let p[0] = 0;
+        return p + 2;
+    }
+
+    /** De-allocates the given object and frees its space. */
+    function void deAlloc(int object) {
+        var Array l0, l1;
+
+        let l0 = object - 2;
+        let l1 = l0[1];
+        if (l1[0] = 0) {
+            let l0[0] = l0[1] - l0 - 2;
+        } else {
+            let l0[0] = l0[1] - l0 + l1[0];
+            if (l1[1] = (l1 + 2)) {
+                let l0[1] = l0 + 2;
+            } else {
+                let l0[1] = l1[1];
+            }
+        
+        }
+        return;
+    }    
+}

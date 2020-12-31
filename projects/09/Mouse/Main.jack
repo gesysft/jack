@@ -1,0 +1,9 @@
+class Main {
+    function void main() {
+        var MouseTool tool;
+        let tool = MouseTool.new();
+        do tool.run();
+        do tool.dispose();
+        return;
+    }
+}
