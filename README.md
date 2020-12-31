@@ -11,3 +11,9 @@ $ ./Assembler projects/06/add/Add.asm
 $ make VMTranslator
 $ ./VMTranslator projects/08/FunctionCalls/FibonacciElement
 ```
+
+## JackCompiler
+```
+$ make JackCompiler
+$ ./JackCompiler projects/12/ScreenTest
+```

@@ -53,6 +53,7 @@ public:
             out(tk->token());
         outnone("tokens", 1, 0);
     }
+
 private:
     void compileClassVarDec() {
         // ('static' | 'field') type varName (',' varName)* ';'
@@ -338,6 +339,7 @@ private:
         }
         outnone("expression", 1);
     }
+
     void compileTerm() {
         std::string name;
         std::string unaryOp;
@@ -459,6 +461,7 @@ private:
         if (ofp != NULL && ofp != stdout)
             fclose(ofp);
     }
+
 private:
     JackTokenizer *tk;
     SymbolTable *st;
