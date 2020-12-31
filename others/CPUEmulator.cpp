@@ -6,9 +6,9 @@
 #include <map>
 #include <string.h>
 #include <vector>
-#include "ASMParser.h"
-#include "ASMSymbolTable.h"
-#include "Code.h"
+#include "../ASMParser.h"
+#include "../ASMSymbolTable.h"
+#include "../Code.h"
 
 using namespace std;
 

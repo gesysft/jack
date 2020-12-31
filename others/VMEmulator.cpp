@@ -4,7 +4,7 @@
 #include <vector>
 #include <stdio.h>
 #include <unistd.h>
-#include "VMParser.h"
+#include "../VMParser.h"
 
 using namespace std;
 
@@ -85,7 +85,7 @@ int main() {
 
     // begin with Sys.init
     PC = 0;
-    for (int i = 0; i < ROM.size(); ++i)
+    for (size_t i = 0; i < ROM.size(); ++i)
         if (ROM[i].arg1 == "Sys.init") {
             PC = i;
             break;
