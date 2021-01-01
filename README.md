@@ -1,5 +1,16 @@
 # jack
 
+## book
+```
+https://book.douban.com/subject/1998645/
+```
+
+## book's website
+```
+www.and2tetris.org
+```
+
+
 ## Assembler
 ```
 $ make Assembler
