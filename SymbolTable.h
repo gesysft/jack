@@ -4,7 +4,7 @@
 #include <string>
 #include <map>
 
-enum { KIND_STATIC = 0, KIND_FIELD, KIND_ARG, KIND_VAR, KIND_NONE };
+enum {KIND_STATIC = 0, KIND_FIELD, KIND_ARG, KIND_VAR, KIND_NONE};
 
 class SymbolTable {
 public:
