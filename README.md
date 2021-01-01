@@ -6,10 +6,10 @@
 ## book's website
 www.nand2tetris.org
 
-## Assembler
+## JackCompiler
 ```
-$ make Assembler
-$ ./Assembler projects/06/add/Add.asm 
+$ make JackCompiler
+$ ./JackCompiler projects/12/ScreenTest
 ```
 
 ## VMTranslator
@@ -18,8 +18,11 @@ $ make VMTranslator
 $ ./VMTranslator projects/08/FunctionCalls/FibonacciElement
 ```
 
-## JackCompiler
+## Assembler
 ```
-$ make JackCompiler
-$ ./JackCompiler projects/12/ScreenTest
+$ make Assembler
+$ ./Assembler projects/06/add/Add.asm 
 ```
+
+
+
