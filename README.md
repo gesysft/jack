@@ -1,4 +1,4 @@
-# jack
+# The Elements of Computing Systems (Building a Modern Computer from First Principles)
 
 ## book
 [The Elements of Computing Systems](https://book.douban.com/subject/1998645/)
