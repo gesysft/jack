@@ -10,6 +10,7 @@ www.nand2tetris.org
 ```
 $ make JackCompiler
 $ ./JackCompiler projects/12/ScreenTest
+$ ./tools/VMEmulator.sh
 ```
 
 ## VMTranslator
@@ -23,6 +24,3 @@ $ ./VMTranslator projects/08/FunctionCalls/FibonacciElement
 $ make Assembler
 $ ./Assembler projects/06/add/Add.asm 
 ```
-
-
-
