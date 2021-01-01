@@ -1,7 +1,5 @@
 2 Boolean Arithmetic
 
-2.1 Background
-
 Binary Numbers
     (10011)two = 1 * 16 + 0 * 8 + 0 * 4 + 1 * 2 + 1 * 1 = 19
 
@@ -48,8 +46,7 @@ Signed Binary Numbers
     * To obtain the code of -x from the code x, which is easier to implement in hardware,
       is to flip all the bits of x and add 1 to the result
 
-2.2 Specification
-2.2.1 Adders
+Adders
 
         a   b   carry   sum
         0   0   0       0
@@ -98,7 +95,7 @@ Signed Binary Numbers
     Comment:    Integer 2's complement addition.
                 overflow is neither detected nor handled.
 
-2.2.2 The Arthmetic Logic Unit(ALU)
+The Arthmetic Logic Unit(ALU)
 
     Chip name:  ALU
     Inputs:     x[16], y[16], 
