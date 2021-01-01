@@ -2,14 +2,13 @@
 
 ## book
 ```
-https://book.douban.com/subject/1998645/
+[The Elements of Computing Systems] (https://book.douban.com/subject/1998645/)
 ```
 
 ## book's website
 ```
-www.and2tetris.org
+[nand2tetris] (www.nand2tetris.org)
 ```
-
 
 ## Assembler
 ```
