@@ -17,10 +17,12 @@ $ ./tools/VMEmulator.sh
 ```
 $ make VMTranslator
 $ ./VMTranslator projects/08/FunctionCalls/FibonacciElement
+$ ./tools/CPUEmulator.sh
 ```
 
 ## Assembler
 ```
 $ make Assembler
 $ ./Assembler projects/06/add/Add.asm 
+$ ./tools/CPUEmulator.sh
 ```
