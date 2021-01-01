@@ -1,4 +1,4 @@
-# The Elements of Computing Systems (Building a Modern Computer from First Principles)
+# The Elements of Computing Systems
 
 ## book
 [The Elements of Computing Systems](https://book.douban.com/subject/1998645/)
