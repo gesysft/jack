@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
             continue;
         }
 
-        /* is not dir */
+        // is not dir 
         if (!S_ISDIR(stbuf.st_mode)) {
             string ifname = *argv;
             if (ifname.find(".jack") == string::npos)
@@ -72,5 +72,3 @@ int main(int argc, char *argv[]) {
     }
     return 0;
 }
-
-
