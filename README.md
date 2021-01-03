@@ -1,5 +1,8 @@
 # The Elements of Computing Systems
 
+## bilibili
+[The Elements of Computing Systems](https://www.bilibili.com/video/BV1254y1x7c4/)
+
 ## book
 [The Elements of Computing Systems](https://book.douban.com/subject/1998645/)
 
