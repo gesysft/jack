@@ -3,7 +3,7 @@
 #include <string>
 #include <map>
 
-enum { SEGMENT_CONST, SEGMENT_ARG, SEGMENT_LOCAL, SEGMENT_STATIC, SEGMENT_THIS,
+enum VMSegment { SEGMENT_CONST, SEGMENT_ARG, SEGMENT_LOCAL, SEGMENT_STATIC, SEGMENT_THIS,
         SEGMENT_THAT, SEGMENT_POINTER, SEGMENT_TEMP, SEGMENT_NONE };
 
 static std::map<int, std::string> segmentStr{{SEGMENT_CONST, "constant"}, {SEGMENT_ARG, "argument"},

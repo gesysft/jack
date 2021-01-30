@@ -17,7 +17,6 @@ public:
     }
 
     bool contains(std::string symbol) {
-            
         return m.find(symbol) != m.end();
     }
 

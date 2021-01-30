@@ -3,7 +3,7 @@
 #include <string>
 #include <stdio.h>
 
-enum {A_COMMAND, C_COMMAND, L_COMMAND};
+enum ASMCommand {A_COMMAND, C_COMMAND, L_COMMAND};
 
 class ASMParser {
 public:
